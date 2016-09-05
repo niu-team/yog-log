@@ -345,7 +345,7 @@ Logger.prototype = {
             errno = options['errno'] || 0;
 
         if (this.getLogLevelInt('WARNING') === intLevel || this.getLogLevelInt('FATAL') === intLevel) {
-            logFile += '.wf';
+            logFile = logFile.replace('.log', '_error.log');;
         }
         //文件后缀
         logFile += filename_suffix;
